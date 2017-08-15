@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debugging Contest</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <a href="/"><h2>Ultimate Post!</h2></a>
+    <% if user_signed_in? %>
+      <a href="/users/sign_out" data-method="delete"><h3>로그아웃</h3></a>
+    <% end  %>
+    <%= yield %>
+  </body>
+</html>

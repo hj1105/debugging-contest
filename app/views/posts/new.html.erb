@@ -1,0 +1,7 @@
+<h1>새 Post</h1>
+<form action="/posts/create" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="input_user" value="<%= current_user.id %>">
+  <p>제목 : <input type="text" name="input_content"></p>
+  <div>내용 : <textarea name="input_title" cols="30" rows="10"></textarea></div>
+  <input type="submit" value="얍!">
+</form>

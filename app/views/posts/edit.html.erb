@@ -1,0 +1,8 @@
+<h1>Post 수정하기</h1>
+<form action="/posts/update/<%= @post.id %>" method="put">
+  <input type="hidden" name="input_user" value="<%= current_user.id %>">
+  <p>제목 : <input type="text" name="input_title" value="<%= @post.title %>"></p>
+  <div>내용 : <textarea name="input_content" cols="30" rows="10"><%= @post.content %></textarea></div>
+  <input type="submit" value="얍!">
+</form>
+

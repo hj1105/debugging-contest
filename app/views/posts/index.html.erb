@@ -1,0 +1,6 @@
+<h1>모든 Post들 모아보기</h1>
+<h2><a href="/posts/new">[New Post]</a></h2>
+<% @posts.each do |post| %>
+    <p><b><%= post.user.email %></b> : <a href="/posts/show/<%= post.id %>"><%= post.title %></a></p>
+  <hr>
+<% end %>
